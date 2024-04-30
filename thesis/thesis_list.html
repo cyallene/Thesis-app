@@ -1,0 +1,9 @@
+<!-- templates/thesis/thesis_list.html -->
+<h1>Thesis List</h1>
+<ul>
+  {% for thesis in thesis_list %}
+    <li><a href="{% url 'thesis_detail' thesis.id %}">{{ thesis.title }}</a></li>
+  {% empty %}
+    <li>No theses found.</li>
+  {% endfor %}
+</ul>
